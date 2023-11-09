@@ -1,0 +1,117 @@
+.header {
+	// position: fixed;
+	&__container {
+		min-height: 100px;
+		padding-top: 20px;
+		padding-bottom: 10px;
+		@include flexible($flex-direction: row, $align-items: top);
+		gap: 30px;
+		@media (max-width: 1130px) {
+			gap: 20px;
+		}
+		@media (max-width: 940px) {
+			gap: 15px;
+		}
+		@media (max-width: 680px) {
+			gap: 10px;
+			align-items:center;
+	
+			flex-direction: column;
+		}
+		@media (max-width: 400px) {
+			gap: 5px;
+			align-items:center;
+			flex-direction: column;
+		}
+	}
+	&__logo-img {
+		max-width: 35px;
+	}
+	&__search-input {
+		position: relative;
+		width: 900px;
+		height: 33px;
+		padding: 10px 15px;
+		border-radius: 50px;
+		border: 2px solid black;
+		@include font($weight: 300);
+		&::placeholder {
+			@include font($weight: 300);
+			opacity: 0.6;
+		}
+		@media (max-width: 1130px) {
+			max-width: 700px;
+		}
+		@media (max-width: 940px) {
+			max-width: 500px;
+		}
+		@media (max-width: 680px) {
+			max-width: 400px;
+		}
+		@media (max-width: 400px) {
+			max-width: 360px;
+		}
+	}
+	&__list {
+		display: none;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		z-index: 1;
+	}
+	&__item {
+		@include button;
+		margin-top: 5px;
+		margin-right: 5px;
+		&:active {
+			background-color: #ff5841;
+			color: black;
+		}
+		&:focus {
+			background-color: #fff;
+			color: black;
+		}
+		&:hover {
+			color: black;
+		}
+	}
+	&__menu {
+		width: 100%;
+		position: relative;
+	}
+	&__menu-btn {
+		width: 100%;
+		@include button;
+		&:active {
+			background-color: #fff;
+			color: black;
+		}
+		&:focus {
+			background-color: #fff;
+			color: black;
+		}
+		&:hover {
+			color: black;
+		}
+	}
+	&__menu-list {
+		display: none;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		z-index: 1;
+	}
+
+	&__menu-item {
+		justify-content: center;
+		@include button;
+		margin-top: 5px;
+		margin-right: 5px;
+		&:hover {
+			color: black;
+		}
+	}
+}
+.show {
+	display: block;
+}

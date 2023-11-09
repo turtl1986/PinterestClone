@@ -1,0 +1,17 @@
+.nav {
+  padding: 20px;
+  // margin-top: 100px;
+  @include flexible($flex-direction: row);
+  justify-content: center;
+  gap: 30px;
+  &__name-board {
+    background-color: #ededed;
+	border-radius: 10px;
+	padding: 10px;
+  }
+  &__counter-board {
+    background-color: #ededed;
+	border-radius: 10px;
+	padding: 10px;
+  }
+}

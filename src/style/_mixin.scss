@@ -1,0 +1,45 @@
+@mixin font(
+	$family: Roboto,
+	$weight: 400,
+	$size: 1rem,
+	$line-height: 1.31,
+	$color: black
+) {
+	font-family: $family;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $line-height;
+	color: $color;
+}
+
+@mixin flexible(
+	$flex-direction: column,
+	$align-items: center
+) {
+	display: flex;
+	flex-direction: $flex-direction;
+	align-items: $align-items;
+}
+
+@mixin button(
+	$bg-color: #CB1F27,
+	$border: 2px solid #CB1F27,
+	$family: Roboto,
+	$weight: 500,
+	$size: 1rem,
+	$line-height: 1.31rem,
+	$color: #fff
+) {
+	background-color: $bg-color;
+	border: $border;
+	border-radius: 10px;
+	font-family: $family;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $line-height;
+	color: $color;
+	cursor: pointer;
+	transition: 1s;
+	padding: 5px 15px;
+  min-width: 115px;
+}
